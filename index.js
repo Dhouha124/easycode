@@ -1,8 +1,21 @@
-const button = document.getElementById("btn-id");
-console.log(button);
-button.addEventListener("click", updateName);
+function passworrd() {
+    var passwordInput = document.getElementById('password');
+    var showPasswordCheckbox = document.getElementById('showPassword');
 
-function updateName() {
-  const name = prompt("Enter a new name");
-  button.textContent = `Player 1: ${name}`;
+    if (showPasswordCheckbox.checked) {
+        passwordInput.type = 'text';
+    } else {
+        passwordInput.type = 'password';
+    }
+}
+
+function submitForm() {
+    var mail = document.getElementById('mail').value;
+    var password = document.getElementById('password').value;
+
+    if (mail && password) {
+        alert('mail : ' + mail + '\nMot de passe : ' + password);
+    } else {
+        alert('Veuillez remplir tous les champs.');
+    }
 }
